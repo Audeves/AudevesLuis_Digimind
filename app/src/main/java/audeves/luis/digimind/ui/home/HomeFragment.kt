@@ -48,7 +48,7 @@ class HomeFragment : Fragment() {
 //        }
 
 
-
+        cargar_tareas()
         adaptador = AdaptadorTareas(root.context, tasks)
 
         gridView.adapter = adaptador

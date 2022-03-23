@@ -42,8 +42,13 @@ class DashboardFragment : Fragment() {
         }
 
         binding.btnSave.setOnClickListener{
-            guardar()
+            if (binding.etTask.text !=null && binding.btnTime.text  !="HORA" && binding.rgDias.checkedRadioButtonId!=-1){
+                guardar()
+            } else{
+                Toast.makeText(context,"Llenar campos necesarios", Toast.LENGTH_LONG).show()
+            }
         }
+
         return root
     }
     fun guardar(){
